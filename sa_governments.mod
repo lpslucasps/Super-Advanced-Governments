@@ -6,5 +6,4 @@ tags={
 	"Overhaul"
 }
 picture="cover.png"
-remote_file_id="756156765"
 supported_version="1.2.*"

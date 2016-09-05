@@ -42,73 +42,13 @@
 @tier3weight3 = 40
 @tier3weight4 = 35
 
-tech_galactic_rights_and_duties = {
-  cost = @tier2cost3
-  area = society
-  tier = 2
-  category = { statecraft }
-  prerequisites = { "tech_galactic_administration" }
-  weight = @tier2weight3
-
-  # unlocks super advanced government forms
-  prereqfor_desc = {
-    government = {
-      title = "TECH_UNLOCK_NEW_POLICIES_TITLE"
-      desc = "TECH_UNLOCK_NEW_POLICIES_DESC"
-    }
-  }
-
-  weight_modifier = {
-    factor = 4
-    modifier = {
-      factor = 1.25
-      research_leader = {
-        area = society
-        has_trait = "leader_trait_expertise_statecraft"
-      }
-    }
-    modifier = {
-      factor = 0
-      NOT = {
-        OR = {
-          has_government = ai_overlordship
-          has_government = democratic_utopia
-          has_government = illuminated_technocracy
-          has_government = irenic_democracy
-          has_government = irenic_monarchy
-          has_government = irenic_protectorate
-          has_government = martial_demarchy
-          has_government = martial_empire
-          has_government = mega_corporation
-          has_government = ordered_stratocracy
-          has_government = star_empire
-          has_government = subconscious_consensus
-          has_government = transcendent_republic
-          has_government = transcendent_oligarchy
-          has_government = transcendent_empire
-        }
-      }
-    }
-  }
-
-  ai_weight = {
-    factor = 10
-    modifier = {
-      factor = 1.25
-      research_leader = {
-        area = society
-        has_trait = "leader_trait_expertise_statecraft"
-      }
-    }
-  }
-}
 
 tech_galactic_reforms = {
   cost = @tier3cost2
   area = society
   tier = 3
   category = { statecraft }
-  prerequisites = { "tech_galactic_rights_and_duties" }
+  prerequisites = { "tech_galactic_administration" }
   weight = @tier3weight2
 
   # unlocks super advanced government forms
@@ -130,67 +70,6 @@ tech_galactic_reforms = {
       research_leader = {
         area = society
         has_trait = "leader_trait_expertise_statecraft"
-      }
-    }
-  }
-
-  ai_weight = {
-    factor = 10
-    modifier = {
-      factor = 1.25
-      research_leader = {
-        area = society
-        has_trait = "leader_trait_expertise_statecraft"
-      }
-    }
-  }
-}
-
-tech_galactic_amendments = {
-  cost = @tier3cost3
-  area = society
-  tier = 3
-  category = { statecraft }
-  prerequisites = { "tech_galactic_reforms" }
-  weight = @tier3weight3
-
-  # unlocks super advanced government forms
-  prereqfor_desc = {
-    government = {
-      title = "TECH_UNLOCK_NEW_POLICIES_2_TITLE"
-      desc = "TECH_UNLOCK_NEW_POLICIES_2_DESC"
-    }
-  }
-
-  weight_modifier = {
-    factor = 4
-    modifier = {
-      factor = 1.25
-      research_leader = {
-        area = society
-        has_trait = "leader_trait_expertise_statecraft"
-      }
-    }
-    modifier = {
-      factor = 0
-      NOT = {
-        OR = {
-          has_government = absolutist_cyberocracy
-          has_government = benevolent_aristocracy
-          has_government = benevolent_monarchy
-          has_government = cyberocratic_plurality
-          has_government = cyberutopian_aristocracy
-          has_government = divine_aristocracy
-          has_government = galactic_empire
-          has_government = holy_empire
-          has_government = martial_ascendancy
-          has_government = meritocratic_corporatocracy
-          has_government = republican_harmony
-          has_government = sacred_republic
-          has_government = stratocratic_commonwealth
-          has_government = utopic_stratocracy
-          has_government = ultrautopian_democracy
-        }
       }
     }
   }
