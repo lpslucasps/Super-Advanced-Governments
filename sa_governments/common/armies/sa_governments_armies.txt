@@ -1,0 +1,61 @@
+##########################################################################
+# Super Advanced Governments Armies
+# by Lucas Pinheiro Silva
+##########################################################################
+
+# Imperial Guard Armies
+imperial_guard_army = {
+	damage = 2.0
+	health = 2.0
+	morale = 2.0
+	assault = yes
+	time = 115
+	maintenance = 0.5
+	icon_frame = 2
+	cost = {
+		minerals = 115
+		energy = 15
+	}
+
+	built_for_ruler = yes
+
+	potential = {
+		owner = {
+			OR = {
+				has_government = absolutist_cyberocracy
+			}
+			exists = ruler
+			ruler = {
+				NOT = { has_leader_flag = has_elite_guard }
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = elite_guard_army_trigger_tooltip
+			owner = {
+				exists = ruler
+				ruler = {
+					NOT = { has_leader_flag = has_elite_guard }
+				}
+			}
+		}
+	}
+
+	on_queued = {
+		owner = {
+			ruler = {
+				set_leader_flag = has_elite_guard
+			}
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			ruler = {
+				remove_leader_flag = has_elite_guard
+			}
+		}
+	}
+}

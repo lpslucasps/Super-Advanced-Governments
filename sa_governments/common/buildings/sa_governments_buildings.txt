@@ -1,0 +1,135 @@
+##########################################################################
+# Super Advanced Governments Buildings
+# by Lucas Pinheiro Silva
+##########################################################################
+
+# Grand Temple
+building_grand_temple = {
+	base_buildtime = 1000
+	built_for_ruler = yes
+	planet_unique = yes
+
+	cost = {
+		minerals = 300
+		influence = 120
+	}
+
+	planet_modifier = {
+		pop_ethic_shift = -0.1
+		pop_happiness = 0.05
+	}
+
+	potential = {
+		planet = {
+			exists = owner
+			owner = {
+				OR = {
+					has_government = holy_empire
+				}
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = building_grand_temple_allowed_tooltip
+			exists = ruler
+			ruler = {
+				NOT = { has_leader_flag = built_monument }
+			}
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+
+	on_queued = {
+		ruler = {
+			set_leader_flag = built_monument
+		}
+	}
+
+	on_unqueued = {
+		ruler = {
+			remove_leader_flag = built_monument
+		}
+	}
+
+	ai_special_building = yes
+
+	ai_allow = {
+		has_any_resource = no
+	}
+
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}
+
+# Grand Royal Gardens
+building_grand_royal_gardens = {
+	base_buildtime = 720
+	built_for_ruler = yes
+	planet_unique = yes
+
+	cost = {
+		minerals = 250
+		influence = 70
+	}
+
+	planet_modifier = {
+		pop_happiness = 0.10
+		pop_ethic_shift = -0.05
+	}
+
+	potential = {
+		planet = {
+			owner = {
+				OR = {
+					has_government = benevolent_monarchy
+				}
+			}
+		}
+	}
+
+	allow = {
+		exists = ruler
+		ruler = {
+			NOT = { has_leader_flag = built_monument }
+		}
+	}
+
+	on_queued = {
+		ruler = {
+			set_leader_flag = built_monument
+		}
+	}
+
+	on_unqueued = {
+		ruler = {
+			remove_leader_flag = built_monument
+		}
+	}
+
+	ai_special_building = yes
+
+	ai_allow = {
+		has_any_resource = no
+	}
+
+	ai_weight = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+	}
+}

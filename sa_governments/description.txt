@@ -1,0 +1,33 @@
+This mod expands the government types, adding third level governments. After researching Galactic Reforms, you will be able to upgrade your government to a super advanced form.
+
+[h1]FEATURES[/h1]
+
+[h1]Super Advanced Government Forms[/h1]
+Further enhance your bureaucratic efficiency with third level governments! Every vanilla advanced government now has a super advanced form, with increased effects.
+
+[h1]New Policies[/h1]
+Once you rsearch Galactic Rights and Duties (only available if you have an Advanced Government), you will be able to customize your Military Focus, Economic Coordination and Foreign Policy. These policies were inspired by the [url=http://steamcommunity.com/sharedfiles/filedetails/?id=687130432]More Policies Mod[/url], and work like sliders with tradeoffs and benefits that must be eased into gradually. After acquiring a Super Advanced Government, you'll be able to unlock the Strong and Extreme versions of these policies.
+
+[h1]COMPATIBILITY[/h1]
+
+Unfortunately, for the mod to work properly, I had to overwrite a lot of vanilla files. Below is a list of all the files modified:
+
+[list][*]common\armies\00_armies.txt
+[*]common\buildings\00_buildings.txt
+[*]common\country_types\00_country_types.txt
+[*]common\diplo_phrases\00_diplo_phrases.txt
+[*]common\governments\00_governments.txt
+[*]common\personalities\00_personalities.txt
+[*]common\policies\00_policies.txt
+[*]common\random_names\00_empire_names.txt
+[*]events\crisis_events_1.txt
+[*]events\crisis_events_2.txt
+[*]events\on_action_events.txt
+[*]events\pirate_events.txt
+[*]events\pretender_events.txt[/list]
+
+I do intend to create custom army attachments and buildings for the advanced empires, which would turn this mod more compatible.
+
+[H1]MY OTHER MODS[/h1]
+[url=http://steamcommunity.com/sharedfiles/filedetails/?id=736632183]Better Subjects[/url] - adds new types of Subject Empires, policy trees that affect their taxation and/or subsidization, and a new mechanic of Diplomatic Missions.
+[url=http://steamcommunity.com/sharedfiles/filedetails/?id=738322403]War Demand: Demilitarize[/url] - let's you demand the demilitarization of your enemies. Empires that are forcefully demilitarized have their Naval Capacity halved.
